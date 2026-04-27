@@ -1,0 +1,24 @@
+{
+  "name": "nexus-continuity-protocol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yojhanbot/NEXUS-Continuity-Protocol.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yojhanbot/NEXUS-Continuity-Protocol/issues"
+  },
+  "homepage": "https://github.com/yojhanbot/NEXUS-Continuity-Protocol#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
+}

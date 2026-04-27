@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | Continuity Protocol</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+</head>
+<body>
+    <div id="nexus-container">
+        <header>
+            <div class="status-dot"></div>
+            <h1>NEXUS <span class="v-tag">v1.0</span></h1>
+        </header>
+
+        <div id="controls">
+            <input type="text" id="video-url" placeholder="Pega URL .mp4">
+            <button onclick="cargarUrlUniversal()">Cargar Link</button>
+            <label for="file-upload" class="custom-file-upload">📁 Subir Archivo</label>
+            <input type="file" id="file-upload" accept="video/*" onchange="cargarArchivoLocal(event)">
+        </div>
+
+        <main>
+            <div id="vision-canvas-container">
+                <video id="input-video" style="display:none"></video>
+                <canvas id="output-canvas"></canvas>
+                <div id="gesture-indicator">SISTEMA LISTO</div>
+            </div>
+
+            <div id="content-area">
+                <div id="video-wrapper">
+                    <p id="content-status">Esperando contenido...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+    <script src="vision.js"></script>
+</body>
+</html>
