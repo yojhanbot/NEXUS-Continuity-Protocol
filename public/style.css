@@ -108,3 +108,64 @@ button:hover {
     font-weight: bold;
     font-size: 0.8em;
 }
+
+input[type="file"] {
+    display: none; /* Esto oculta el texto feo de Windows */
+}
+
+.hud-panel {
+    background: rgba(0, 20, 40, 0.6);
+    border-left: 4px solid var(--hud-gold);
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.stat {
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+#stat-latency, #stat-fps {
+    color: var(--hud-cyan);
+    font-weight: bold;
+}
+
+.pulse {
+    animation: blink 1s infinite;
+    color: #ff4444;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.hud-resource-fade {
+    animation: nexusAppear 0.5s ease-out;
+}
+
+@keyframes nexusAppear {
+    from { opacity: 0; transform: scale(0.95); filter: blur(10px); }
+    to { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+.hud-fallback {
+    padding: 40px;
+    border: 2px solid var(--hud-cyan);
+    text-align: center;
+    background: rgba(0, 242, 255, 0.1);
+}
+
+.hud-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: var(--hud-gold);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+}
